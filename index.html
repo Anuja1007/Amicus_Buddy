@@ -1,22 +1,82 @@
+<!-- AMICUS FULL WEBSITE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Amicus – Your Mental Wellness Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amicus – Your Mental Wellness Companion</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>💚 Amicus</h1>
-    <p class="subtitle">How was your day?</p>
-
-    <textarea id="userInput" placeholder="Type here..."></textarea>
-    <button onclick="handleSend()">Send</button>
-
-    <div id="responseBox"></div>
-    <p class="powered">⚡ Built with Bolt.new + Cohere</p>
+  <div class="nav">
+    <h2>Amicus</h2>
+    <div class="tabs">
+      <button onclick="switchTab('chat')">Chat</button>
+      <button onclick="switchTab('games')">Games</button>
+      <button onclick="switchTab('mood')">Mood Tracker</button>
+      <button onclick="switchTab('movies')">MoodFlix</button>
+      <button onclick="switchTab('quiz')">Quiz</button>
+      <button onclick="switchTab('review')">Reviews</button>
+    </div>
   </div>
+
+  <div class="content">
+    <!-- Chat Tab -->
+    <div id="chat" class="tab active">
+      <h3>How was your day?</h3>
+      <textarea id="userInput" placeholder="Type here..."></textarea>
+      <button onclick="handleSend()">Send</button>
+      <div id="responseBox"></div>
+    </div>
+
+    <!-- Games Tab -->
+    <div id="games" class="tab">
+      <h3>Mind Calming Games</h3>
+      <button onclick="startBreathingGame()">Breathe With Me</button>
+      <div id="breathingGame"></div>
+    </div>
+
+    <!-- Mood Tracker Tab -->
+    <div id="mood" class="tab">
+      <h3>Select Your Mood</h3>
+      <button onclick="selectMood('red')">😢</button>
+      <button onclick="selectMood('yellow')">😐</button>
+      <button onclick="selectMood('green')">😊</button>
+      <div id="moodCalendar"></div>
+    </div>
+
+    <!-- MoodFlix Tab -->
+    <div id="movies" class="tab">
+      <h3>MoodFlix 🎬</h3>
+      <select id="moodSelect">
+        <option value="red">Sad/Stressed</option>
+        <option value="yellow">Neutral</option>
+        <option value="green">Happy</option>
+      </select>
+      <button onclick="suggestMovies()">Get Suggestions</button>
+      <div id="movieSuggestions"></div>
+    </div>
+
+    <!-- Quiz Tab -->
+    <div id="quiz" class="tab">
+      <h3>Wellness Quiz</h3>
+      <div id="quizContainer">(Coming soon!)</div>
+    </div>
+
+    <!-- Reviews Tab -->
+    <div id="review" class="tab">
+      <h3>Share Your Experience</h3>
+      <textarea id="reviewInput" placeholder="Leave your review..."></textarea>
+      <button onclick="submitReview()">Submit</button>
+      <div id="reviewList"></div>
+    </div>
+  </div>
+
+  <footer>
+    ⚡ Built with Bolt.new + Cohere
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+f6
