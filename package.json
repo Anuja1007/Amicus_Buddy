@@ -1,0 +1,13 @@
+{
+  "name": "amicus-mental-wellness",
+  "version": "1.0.0",
+  "description": "A mental wellness companion web application",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": ["mental-health", "wellness", "companion"],
+  "author": "",
+  "license": "MIT"
+}
