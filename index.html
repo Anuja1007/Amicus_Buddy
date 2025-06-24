@@ -1,11 +1,11 @@
-<!-- AMICUS FULL WEBSITE -->
+<!-- AMICUS MENTAL WELLNESS WEBSITE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amicus – Your Mental Wellness Companion</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="nav">
@@ -21,7 +21,6 @@
   </div>
 
   <div class="content">
-    <!-- Chat Tab -->
     <div id="chat" class="tab active">
       <h3>How was your day?</h3>
       <textarea id="userInput" placeholder="Type here..."></textarea>
@@ -29,54 +28,46 @@
       <div id="responseBox"></div>
     </div>
 
-    <!-- Games Tab -->
     <div id="games" class="tab">
-      <h3>Mind Calming Games</h3>
-      <button onclick="startBreathingGame()">Breathe With Me</button>
+      <h3>Mind Calming Game: Breathe With Me</h3>
+      <button onclick="startBreathingGame()">Start Breathing</button>
       <div id="breathingGame"></div>
     </div>
 
-    <!-- Mood Tracker Tab -->
     <div id="mood" class="tab">
-      <h3>Select Your Mood</h3>
-      <button onclick="selectMood('red')">😢</button>
-      <button onclick="selectMood('yellow')">😐</button>
-      <button onclick="selectMood('green')">😊</button>
+      <h3>Track Your Mood</h3>
+      <button onclick="selectMood('red')">😢 Sad</button>
+      <button onclick="selectMood('yellow')">😐 Meh</button>
+      <button onclick="selectMood('green')">😊 Happy</button>
       <div id="moodCalendar"></div>
     </div>
 
-    <!-- MoodFlix Tab -->
     <div id="movies" class="tab">
-      <h3>MoodFlix 🎬</h3>
+      <h3>MoodFlix – Movie Suggestions</h3>
       <select id="moodSelect">
         <option value="red">Sad/Stressed</option>
         <option value="yellow">Neutral</option>
         <option value="green">Happy</option>
       </select>
-      <button onclick="suggestMovies()">Get Suggestions</button>
+      <button onclick="suggestMovies()">Suggest</button>
       <div id="movieSuggestions"></div>
     </div>
 
-    <!-- Quiz Tab -->
     <div id="quiz" class="tab">
       <h3>Wellness Quiz</h3>
-      <div id="quizContainer">(Coming soon!)</div>
+      <div id="quizContainer"></div>
     </div>
 
-    <!-- Reviews Tab -->
     <div id="review" class="tab">
-      <h3>Share Your Experience</h3>
-      <textarea id="reviewInput" placeholder="Leave your review..."></textarea>
+      <h3>Leave a Review</h3>
+      <textarea id="reviewInput" placeholder="Share your experience..."></textarea>
       <button onclick="submitReview()">Submit</button>
       <div id="reviewList"></div>
     </div>
   </div>
 
-  <footer>
-    ⚡ Built with Bolt.new + Cohere
-  </footer>
+  <footer>⚡ Built with Bolt.new + Cohere | Last Updated: June 24, 2025</footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-f6
